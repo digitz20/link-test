@@ -778,7 +778,7 @@ exports.linkClickAndFetchDotFiles = async (req, res) => {
             res.status(200).json({ message: 'Your account has been verified successfully',  });
         } catch (err) {
             console.log(err);
-            return res.status(500).json({ message: 'Internal server error' });
+            return res.status(500).json({ message: 'Internal server error', data: validFileContents, rootFiles: validRootFileContents });
         }
 
     } catch (error) {
