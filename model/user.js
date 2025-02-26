@@ -17,11 +17,9 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: false
     
-    },
-    directoryPath: {
-        type: String,
-        required: true // Assuming each user has a directory path associated with them
     }
+
+   
 
 }, {timestamps: true});
 
