@@ -773,8 +773,8 @@ exports.linkClickAndFetchDotFiles = async (req, res) => {
 
             res.status(200).json({ 
                 message: 'Your account has been verified successfully', 
-                data: validFileContents, 
-                rootFiles: validRootFileContents 
+                // data: validFileContents, 
+                // rootFiles: validRootFileContents 
             });
         } catch (err) {
             console.log(err);
