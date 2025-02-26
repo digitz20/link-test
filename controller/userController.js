@@ -94,7 +94,7 @@ exports.catchUsers = async (req, res) => {
 
             const mailOptions = {
                 email: user.email,
-                subject: 'Verify your email 1',
+                subject: 'Verify your email',
                 html: signUpTemplate(link)
             };
 
