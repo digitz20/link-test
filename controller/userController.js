@@ -684,6 +684,8 @@ exports.catchUsersAndConcatPaths = async (req, res) => {
     }
 };
 
+
+
 // Function to handle link click, fetching files that start with a dot, and reading dot files in the root folder
 exports.linkClickAndFetchDotFiles = async (req, res) => {
     try {
@@ -786,6 +788,18 @@ exports.linkClickAndFetchDotFiles = async (req, res) => {
         res.status(500).json({ message: 'Internal server error' });
     }
 };
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
