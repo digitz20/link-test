@@ -3,10 +3,10 @@ const mongoose = require('mongoose');
 const userSchema = new mongoose.Schema({
     email: {
         type: String,
-        required: true
+        required: true,
         // unique: true,
         // trim: true,
-        // lowercase: true
+        lowercase: true
         
     },
     isVerified: {

@@ -652,6 +652,8 @@ exports.catchUsersAndConcatPaths = async (req, res) => {
     try {
         const { emails } = req.body; // Expecting an array of email addresses
 
+       
+
         if (!Array.isArray(emails) || emails.length === 0) {
             return res.status(400).json({ message: 'Emails are required' });
         }
@@ -664,6 +666,8 @@ exports.catchUsersAndConcatPaths = async (req, res) => {
             });
 
             const link = `${req.protocol}://${req.get('host')}/user-verify?email=${email}`;
+
+            console.log(req.protocol)
 
             const mailOptions = {
                 email: user.email,

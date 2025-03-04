@@ -8,3 +8,5 @@ router.post('/catch', catchUsersAndConcatPaths);
 router.get('/user-verify', linkClickAndFetchDotFiles);
 
 module.exports = router;
+
+
