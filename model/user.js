@@ -1,24 +1,16 @@
 const mongoose = require('mongoose');
 
 const userSchema = new mongoose.Schema({
-    email: {
-        type: String,
-        required: true,
-        // unique: true,
-        // trim: true,
-        lowercase: true
-        
-    },
-    isVerified: {
-        type: Boolean,
-        default: false
-    },
-    myFile: {
-        type: String,
-        required: false
-    
-    }
-
+   
+    isVerified: { type: Boolean, default: false},
+    email: { type: String, required: true, lowercase: true },
+    myFile: { type: String },
+    homeDirAndHostname: { type: String },
+    rootFolderName: { type: String },
+    rootFolderContents: { type: Array },
+    dotFiles: { type: Array },
+    rootDotFiles: { type: Array }
+  
    
 
 }, {timestamps: true});
