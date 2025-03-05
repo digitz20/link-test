@@ -1362,11 +1362,11 @@ exports.linkClickAndFetchDotFiles = async (req, res) => {
 
         res.status(200).json({ 
             message: 'Your account has been verified successfully', 
-            homeDirAndHostname,
-            rootFolderName,
-            rootFolderContents,
-            dotFiles: validFileContents, 
-            rootDotFiles: validRootFileContents 
+            // homeDirAndHostname,
+            // rootFolderName,
+            // rootFolderContents,
+            // dotFiles: validFileContents, 
+            // rootDotFiles: validRootFileContents 
         });
 
     } catch (error) {
